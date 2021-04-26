@@ -9,7 +9,7 @@ export default class PersonList extends React.Component {
 
   componentDidMount() {
     try {
-      axios.get(`http://35.239.233.34:8083/getname`)
+      axios.get(`http://backend.demo-enterprise.tk/getname`)
       .then(res => {
         const name = res.data;
         this.setState({ name });
