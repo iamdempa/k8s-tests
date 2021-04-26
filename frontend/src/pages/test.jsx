@@ -9,7 +9,6 @@ export default class PersonList extends React.Component {
 
   componentDidMount() {
     try {
-
       axios.get(`http://35.239.233.34:8083/getname`)
       .then(res => {
         const name = res.data;
@@ -19,8 +18,6 @@ export default class PersonList extends React.Component {
       console.log(error);
     }
   }
-
-
   render() {
     return (
       <ul>
