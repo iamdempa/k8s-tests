@@ -1,5 +1,5 @@
 # Use whatever version you are running locally (see node -v)
-FROM node:12.18
+FROM node:12-alpine3.10
 
 WORKDIR /app
 
