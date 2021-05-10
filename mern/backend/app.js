@@ -20,6 +20,10 @@ app.use(express.json({ extended: false }));
 
 app.get('/', (req, res) => res.send('Hello world!'));
 
+app.get('/health-check',(req,res)=> {
+    res.send ("OK");
+});
+
 // use Routes
 app.use('/api/books', books);
 
