@@ -19,7 +19,7 @@ class UpdateBookInfo extends Component {
   componentDidMount() {
     // console.log("Print id: " + this.props.match.params.id);
     axios
-      .get('http://34.71.167.54:8080/api/books/'+this.props.match.params.id)
+      .get('http://35.225.95.36:8080/api/books/'+this.props.match.params.id)
       .then(res => {
         // this.setState({...this.state, book: res.data})
         this.setState({
@@ -53,7 +53,7 @@ class UpdateBookInfo extends Component {
     };
 
     axios
-      .put('http://34.71.167.54:8080/api/books/'+this.props.match.params.id, data)
+      .put('http://35.225.95.36:8080/api/books/'+this.props.match.params.id, data)
       .then(res => {
         this.props.history.push('/show-book/'+this.props.match.params.id);
       })
