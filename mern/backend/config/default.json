@@ -1,5 +1,5 @@
 {
   "mongoURI":
     "mongodb+srv://admin:admin@k8s.l2siq.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
-    "mongodocker": "mongodb://mongodbtest/admin"
+    "mongodocker": "mongodb://mongodbtest/test?authSource=admin"
 }
