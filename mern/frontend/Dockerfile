@@ -1,17 +1,31 @@
-# Use whatever version you are running locally (see node -v)
-FROM node:12-alpine3.10
+# # Use whatever version you are running locally (see node -v)
+# FROM node:12-alpine3.10
 
+# WORKDIR /app
+
+# # Install dependencies (you are already in /app)
+# COPY package.json package-lock.json ./
+# RUN npm ci
+
+# # Add rest of the client code
+# # .dockerignore needs to skip node_modules
+# COPY . /app
+
+# EXPOSE 3000
+
+# CMD ["npm", "start"]
+
+
+# build env
+FROM node:13.12.0-alpine as build
 WORKDIR /app
-
-# Install dependencies (you are already in /app)
-COPY package.json package-lock.json ./
+COPY package*.json ./
 RUN npm ci
+COPY . ./
+RUN npm run build
 
-# Add rest of the client code
-# .dockerignore needs to skip node_modules
-COPY . /app
-
-EXPOSE 3000
-
-CMD ["npm", "start"]
-
+# production env
+FROM nginx:stable-alpine
+COPY --from=build /app/build /usr/share/nginx/html
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
