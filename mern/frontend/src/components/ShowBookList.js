@@ -21,7 +21,7 @@ class ShowBookList extends Component {
         })
       })
       .catch(err =>{
-        console.log('Error from ShowBookList');
+        console.log(`${err} ----- Backend URL IS: ${process.env.REACT_APP_BACKEND_URL} && Backend Port is: ${process.env.REACT_APP_BACKEND_PORT}`);
       })
   };
 

@@ -32,7 +32,7 @@ class UpdateBookInfo extends Component {
         })
       })
       .catch(err => {
-        console.log("Error from UpdateBookInfo");
+        console.log(`${err} ----- Backend URL IS: ${process.env.REACT_APP_BACKEND_URL} && Backend Port is: ${process.env.REACT_APP_BACKEND_PORT}`);
       })
   };
 
@@ -58,7 +58,7 @@ class UpdateBookInfo extends Component {
         this.props.history.push('/show-book/'+this.props.match.params.id);
       })
       .catch(err => {
-        console.log("Error in UpdateBookInfo!");
+        console.log(`${err} ----- Backend URL IS: ${process.env.REACT_APP_BACKEND_URL} && Backend Port is: ${process.env.REACT_APP_BACKEND_PORT}`);
       })
   };
 

@@ -47,7 +47,7 @@ class CreateBook extends Component {
         this.props.history.push('/');
       })
       .catch(err => {
-        console.log(err);
+        console.log(`${err} ----- Backend URL IS: ${process.env.REACT_APP_BACKEND_URL} && Backend Port is: ${process.env.REACT_APP_BACKEND_PORT}`);
       })
   };
 

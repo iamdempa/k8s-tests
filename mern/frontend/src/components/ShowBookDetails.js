@@ -22,7 +22,7 @@ class showBookDetails extends Component {
         })
       })
       .catch(err => {
-        console.log("Error from ShowBookDetails");
+        console.log(`${err} ----- Backend URL IS: ${process.env.REACT_APP_BACKEND_URL} && Backend Port is: ${process.env.REACT_APP_BACKEND_PORT}`);
       })
   };
 
@@ -33,7 +33,7 @@ class showBookDetails extends Component {
         this.props.history.push("/");
       })
       .catch(err => {
-        console.log("Error form ShowBookDetails_deleteClick");
+        console.log(`${err} ----- Backend URL IS: ${process.env.REACT_APP_BACKEND_URL} && Backend Port is: ${process.env.REACT_APP_BACKEND_PORT}`);
       })
   };
 
