@@ -19,7 +19,7 @@ class UpdateBookInfo extends Component {
   componentDidMount() {
     // console.log("Print id: " + this.props.match.params.id);
     axios
-      .get(`http://${REACT_APP_BACKEND_URL}:${REACT_APP_BACKEND_PORT}/api/books/`+this.props.match.params.id)
+      .get(`http://${process.env.REACT_APP_BACKEND_URL}:${process.env.REACT_APP_BACKEND_PORT}/api/books/`+this.props.match.params.id)
       .then(res => {
         // this.setState({...this.state, book: res.data})
         this.setState({
@@ -53,7 +53,7 @@ class UpdateBookInfo extends Component {
     };
 
     axios
-      .put(`http://${REACT_APP_BACKEND_URL}:${REACT_APP_BACKEND_PORT}/api/books/`+this.props.match.params.id, data)
+      .put(`http://${process.env.REACT_APP_BACKEND_URL}:${process.env.REACT_APP_BACKEND_PORT}/api/books/`+this.props.match.params.id, data)
       .then(res => {
         this.props.history.push('/show-book/'+this.props.match.params.id);
       })
