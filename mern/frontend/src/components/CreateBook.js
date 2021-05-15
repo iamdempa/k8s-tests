@@ -47,7 +47,7 @@ class CreateBook extends Component {
         this.props.history.push('/');
       })
       .catch(err => {
-        console.log("Error in CreateBook!");
+        console.log(err);
       })
   };
 
