@@ -52,6 +52,7 @@ class ShowBookList extends Component {
               <Link to="/create-book" className="btn btn-outline-warning float-right">
                 + Add New Book
               </Link>
+              {console.log(process.env.REACT_APP_BACKEND_URL)}
               <br />
               <br />
               <hr />
