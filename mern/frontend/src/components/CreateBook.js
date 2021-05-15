@@ -34,7 +34,7 @@ class CreateBook extends Component {
     };
 
     axios
-      .post(`http://${process.env.REACT_APP_BACKEND_URL}:${process.env.REACT_APP_BACKEND_PORT}/api/books`, data)
+      .post(`http://backend.demo-enterprise.tk/api/books`, data)
       .then(res => {
         this.setState({
           title: '',
