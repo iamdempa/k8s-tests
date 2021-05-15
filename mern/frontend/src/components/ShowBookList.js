@@ -13,7 +13,7 @@ class ShowBookList extends Component {
   }
 
   componentDidMount() {
-    console.log(`console ======== ${process.env.REACT_APP_BACKEND_URL} and port ======== ${process.env.REACT_APP_BACKEND_PORT}`)
+    // console.log(`console ======== ${process.env.REACT_APP_BACKEND_URL} and port ======== ${process.env.REACT_APP_BACKEND_PORT}`)
     axios
       .get(`http://backend.demo-enterprise.tk:8080/api/books`)
       .then(res => {
@@ -22,8 +22,8 @@ class ShowBookList extends Component {
         })
       })
       .catch(err =>{
-        console.log(`console ======== ${process.env.REACT_APP_BACKEND_URL} and port ======== ${process.env.REACT_APP_BACKEND_PORT}`)
-        console.log(`${err} ----- Backend URL IS: ${process.env.REACT_APP_BACKEND_URL} && Backend Port is: ${process.env.REACT_APP_BACKEND_PORT}`);
+        // console.log(`console ======== ${process.env.REACT_APP_BACKEND_URL} and port ======== ${process.env.REACT_APP_BACKEND_PORT}`)
+        console.log(`${err}`);
       })
   };
 
