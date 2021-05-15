@@ -13,6 +13,7 @@ class ShowBookList extends Component {
   }
 
   componentDidMount() {
+    console.log(`console ======== ${process.env.REACT_APP_BACKEND_URL}`)
     axios
       .get(`http://${process.env.REACT_APP_BACKEND_URL}:${process.env.REACT_APP_BACKEND_PORT}/api/books`)
       .then(res => {
