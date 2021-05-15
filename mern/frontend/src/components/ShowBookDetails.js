@@ -14,7 +14,7 @@ class showBookDetails extends Component {
   componentDidMount() {
     // console.log("Print id: " + this.props.match.params.id);
     axios
-      .get('http://34.123.243.177:8080/api/books/'+this.props.match.params.id)
+      .get(`http://${REACT_APP_BACKEND_URL}:${REACT_APP_BACKEND_PORT}/api/books/`+this.props.match.params.id)
       .then(res => {
         // console.log("Print-showBookDetails-API-response: " + res.data);
         this.setState({
@@ -28,7 +28,7 @@ class showBookDetails extends Component {
 
   onDeleteClick (id) {
     axios
-      .delete('http://34.123.243.177:8080/api/books/'+id)
+      .delete(`http://${REACT_APP_BACKEND_URL}:${REACT_APP_BACKEND_PORT}/api/books/`+id)
       .then(res => {
         this.props.history.push("/");
       })
